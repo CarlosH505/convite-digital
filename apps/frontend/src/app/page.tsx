@@ -1,13 +1,19 @@
-import Pagina from "@/components/template/Pagina";
-import Evento from "@/core";
+import LogoGrande from "@/components/template/LogoGrande";
+import Link from "next/link";
 
 export default function Home() {
-
-  const e: Evento
-
   return (
-   <Pagina className="w-full">
-    <div>Inicio</div>
-   </Pagina>
+    <div className="h-screen flex flex-col justify-center items-center bg-[url('/background-home.svg')] bg-cover gap-10">
+
+      <div className="flex flex-col items-center gap-4">
+        <LogoGrande />
+        <p className="text-zinc-500 font-light w-96 leading-6 text-center select-none"> Crie e gerencie o convite do seu evento de forma rápida e fácil, sem
+          complicações!</p>
+      </div>
+      <Link href="/evento" className="botao azul text-lg uppercase">
+        Crie o seu evento
+      </Link>
+    </div>
+
   );
-}
+};
